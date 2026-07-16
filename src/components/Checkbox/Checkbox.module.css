@@ -1,0 +1,123 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.labelWrapper {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  cursor: pointer;
+  user-select: none;
+}
+
+.labelWrapper.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.nativeCheckbox {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.checkboxControl {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid var(--color-gray-400);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-white);
+  margin-top: 1px;
+  transition:
+    border-color var(--transition-fast),
+    background-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.sm .checkboxControl { width: 1rem;     height: 1rem; }
+.md .checkboxControl { width: 1.125rem; height: 1.125rem; }
+.lg .checkboxControl { width: 1.25rem;  height: 1.25rem; }
+
+.checkmark {
+  display: none;
+  color: var(--color-white);
+}
+
+.sm .checkmark { width: 0.625rem; height: 0.625rem; }
+.md .checkmark { width: 0.75rem;  height: 0.75rem; }
+.lg .checkmark { width: 0.875rem; height: 0.875rem; }
+
+.dash {
+  display: none;
+  width: 55%;
+  height: 2px;
+  border-radius: 1px;
+  background-color: var(--color-white);
+}
+
+.nativeCheckbox:checked + .checkboxControl {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+.nativeCheckbox:checked + .checkboxControl .checkmark {
+  display: block;
+}
+
+.nativeCheckbox:indeterminate + .checkboxControl {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+.nativeCheckbox:indeterminate + .checkboxControl .dash {
+  display: block;
+}
+
+.nativeCheckbox:focus-visible + .checkboxControl {
+  box-shadow: var(--shadow-focus);
+  border-color: var(--color-primary);
+}
+
+.labelWrapper:hover:not(.disabled) .nativeCheckbox:not(:checked) + .checkboxControl {
+  border-color: var(--color-primary);
+}
+
+.error .checkboxControl {
+  border-color: var(--color-danger);
+}
+
+.labelText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.label {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-gray-800);
+  line-height: var(--line-height-normal);
+}
+
+.description {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-500);
+  line-height: var(--line-height-normal);
+}
+
+.helperText {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-500);
+  padding-left: calc(1.125rem + var(--space-2));
+}
+
+.errorText {
+  font-size: var(--font-size-xs);
+  color: var(--color-danger);
+  padding-left: calc(1.125rem + var(--space-2));
+}

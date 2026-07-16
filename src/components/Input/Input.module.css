@@ -1,0 +1,109 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  width: 100%;
+}
+
+.label {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-gray-700);
+  line-height: var(--line-height-normal);
+}
+
+.required {
+  color: var(--color-danger);
+  margin-left: var(--space-1);
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  width: 100%;
+  font-family: var(--font-family-base);
+  color: var(--color-gray-900);
+  background-color: var(--color-white);
+  border: 1.5px solid var(--color-gray-300);
+  border-radius: var(--radius-md);
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+  outline: none;
+  box-sizing: border-box;
+}
+
+.input::placeholder {
+  color: var(--color-gray-400);
+}
+
+.input:focus {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-focus);
+}
+
+.input:disabled {
+  background-color: var(--color-gray-100);
+  color: var(--color-gray-400);
+  cursor: not-allowed;
+}
+
+.sm {
+  font-size: var(--font-size-xs);
+  padding: var(--space-1) var(--space-3);
+  height: 2rem;
+}
+
+.md {
+  font-size: var(--font-size-sm);
+  padding: var(--space-2) var(--space-3);
+  height: 2.5rem;
+}
+
+.lg {
+  font-size: var(--font-size-md);
+  padding: var(--space-3) var(--space-4);
+  height: 3rem;
+}
+
+.inputError {
+  border-color: var(--color-danger) !important;
+}
+
+.inputError:focus {
+  box-shadow: var(--shadow-focus-danger) !important;
+}
+
+.startAdornment,
+.endAdornment {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  color: var(--color-gray-400);
+  pointer-events: none;
+}
+
+.startAdornment { left: var(--space-3); }
+.endAdornment   { right: var(--space-3); }
+
+.hasStartAdornment { padding-left: 2.25rem !important; }
+.hasEndAdornment   { padding-right: 2.25rem !important; }
+
+.helperText {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-500);
+  line-height: var(--line-height-normal);
+}
+
+.errorText {
+  font-size: var(--font-size-xs);
+  color: var(--color-danger);
+  line-height: var(--line-height-normal);
+}

@@ -1,0 +1,63 @@
+{
+  "name": "guruprasad-react-components-library",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "A reusable React component library",
+  "author": "Guruprasad",
+  "license": "MIT",
+  "keywords": ["react", "components", "library", "typescript"],
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Guruprasad1991/React-Component-Library"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.cjs.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc && vite build",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "test": "vitest",
+    "test:run": "vitest run"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "8.6.14",
+    "@storybook/addon-interactions": "8.6.14",
+    "@storybook/addon-links": "8.6.14",
+    "@storybook/blocks": "8.6.14",
+    "@storybook/react": "8.6.14",
+    "@storybook/react-vite": "8.6.14",
+    "@storybook/test": "8.6.14",
+    "@testing-library/jest-dom": "^6.4.2",
+    "@testing-library/react": "^16.0.0",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "@vitejs/plugin-react": "4.3.1",
+    "jsdom": "^24.1.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "storybook": "8.6.14",
+    "typescript": "5.5.3",
+    "vite": "5.4.0",
+    "vite-plugin-dts": "3.9.1",
+    "vitest": "^1.6.0"
+  },
+  "overrides": {
+    "vite": "5.4.0"
+  }
+}
