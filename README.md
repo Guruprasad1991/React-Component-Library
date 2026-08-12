@@ -116,6 +116,33 @@ The project now includes architecture and usage documentation for the component 
 - [docs/RESPONSIVE-VARIANTS.md](docs/RESPONSIVE-VARIANTS.md)
 - [docs/COMPONENT-PATTERNS.md](docs/COMPONENT-PATTERNS.md)
 
+## GitHub Pages deployment
+
+This project is set up to publish the component library as a Storybook site on GitHub Pages.
+
+### Local build
+
+```bash
+npm run build-storybook
+```
+
+### GitHub Pages workflow
+
+The repo includes a GitHub Actions workflow that:
+
+1. installs dependencies
+2. builds Storybook
+3. publishes the generated `storybook-static` output to GitHub Pages
+
+To enable it in GitHub:
+
+1. push the repo to GitHub
+2. open the repository settings
+3. go to Pages
+4. set the source to "GitHub Actions"
+
+Then every push to the default branch will publish the Storybook docs automatically.
+
 ## Requirements
 
 - React >= 18.0.0
