@@ -1,4 +1,4 @@
-# react-component-library-guru 
+# Component-library-guru 
 
 A lightweight React component library built with TypeScript and CSS Modules.
 
