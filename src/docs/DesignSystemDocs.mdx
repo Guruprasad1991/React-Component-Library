@@ -1,0 +1,75 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Design System/Overview" />
+
+# Design System Overview
+
+This page acts as the living design-system reference for the component library. It captures the architecture, token model, and the review checklist used for future additions.
+
+## Component Architecture Summary
+
+The library is intentionally small and composable:
+
+- Each component has a focused role and a predictable prop API.
+- Styling is token-first and uses CSS custom properties.
+- Accessibility is treated as part of the component contract.
+- Public exports stay consistent across the package entry points.
+
+## Core Review Checklist
+
+### Architecture
+
+- [ ] One clear responsibility per component
+- [ ] TypeScript prop interface defined explicitly
+- [ ] CSS module or token-based styling used consistently
+- [ ] Accessible HTML semantics preserved
+- [ ] Shared state rules documented and tested
+
+### Tokens
+
+- [ ] Colors come from shared CSS variables
+- [ ] Spacing uses the global spacing scale
+- [ ] Typography uses the shared font scale
+- [ ] Radius and focus ring tokens are reused
+- [ ] New tokens are named clearly and added to the source of truth
+
+### Responsive and Variants
+
+- [ ] Relevant size variants match the library pattern (`sm`, `md`, `lg`)
+- [ ] Default behavior is stable on small screens
+- [ ] Full-width or compact layouts are considered when appropriate
+- [ ] Responsive choices are documented alongside the component usage
+
+### Documentation
+
+- [ ] Storybook examples cover default and stateful variants
+- [ ] Autodocs or equivalent API documentation is available
+- [ ] Accessibility and usage notes are included when needed
+- [ ] Token overrides are noted for theme consumers
+
+## Design Token Usage Rules
+
+The system should prefer reusable tokens over ad hoc values:
+
+```css
+:root {
+  --color-primary: #2563eb;
+  --space-4: 1rem;
+  --radius-md: 0.375rem;
+  --transition-base: 200ms ease;
+}
+```
+
+This keeps multiple components visually aligned and makes the library easier to extend without drift.
+
+## Future Component Sign-off
+
+Before a new component is added, confirm the following:
+
+1. The component fills a real product need.
+2. It follows the shared API and styling conventions.
+3. It works in the default and disabled/error states.
+4. It is documented in Storybook with examples.
+5. It is aligned with the token system, not a one-off implementation.
+
+This checklist becomes the standard for future additions so the library remains consistent, accessible, and easy to scale.

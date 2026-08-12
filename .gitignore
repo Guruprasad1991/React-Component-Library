@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+/dist/
+/storybook-static/
+
+# Vite / TypeScript cache
+.vite/
+*.tsbuildinfo
+
+# Test coverage
+coverage/
+
+# Storybook local cache
+.cache/
+/.storybook/
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Logs
+npm-debug.log*
+
+# Local environment
+.env
+.env.*

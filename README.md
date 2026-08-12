@@ -106,6 +106,16 @@ Override CSS variables to customise the look:
 }
 ```
 
+## Design system docs
+
+The project now includes architecture and usage documentation for the component system:
+
+- [docs/README.md](docs/README.md)
+- [docs/COMPONENT-ARCHITECTURE.md](docs/COMPONENT-ARCHITECTURE.md)
+- [docs/TOKEN-STRUCTURE.md](docs/TOKEN-STRUCTURE.md)
+- [docs/RESPONSIVE-VARIANTS.md](docs/RESPONSIVE-VARIANTS.md)
+- [docs/COMPONENT-PATTERNS.md](docs/COMPONENT-PATTERNS.md)
+
 ## Requirements
 
 - React >= 18.0.0
